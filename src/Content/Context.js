@@ -5,16 +5,6 @@ const ContextAPI = React.createContext()
 
 
 class ContextProvider extends React.Component {
-constructor(props) {
-	super(props)
-
-	this.state = {
-		 name: "",
- 		 token: "",
-	}
-}
-
-
 
              // Método para autenticação de login
 cadUser = () => {
@@ -30,10 +20,8 @@ cadUser = () => {
 		}
 	}).then(response => {		
 		let data = response.data
-		this.setState({
-			token: data.token,
-			name: data.user.name
-		})
+		console.log(data)
+		// document.cookie = "username="+
 	}).catch(err => {
 		let erro = err.request.response
 		alert(erro)

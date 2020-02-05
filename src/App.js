@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 
@@ -15,11 +15,22 @@ import mlRelat from "./ML/relatiorios.js"
 import erroLogin from "./Erro/falhaLogin.js"
 import Error from "./Erro/error.js"
 
+
+
 function App() {
+const [user, setUser] = useState("")
+
+function teste(){
+
+  let user = document.cookie
+  setUser(user)
+}
+
+window.addEventListener("load", () => teste())
   return (
   	<>
   		<ContextProvider>
-		<Navbar />
+		<Navbar user={user} />
 	    <div className="App">
 	    <Switch>
     		<Route path="/" exact component={Home} />
