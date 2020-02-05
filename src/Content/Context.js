@@ -23,7 +23,7 @@ cadUser = () => {
 	
 	axios({
 		method: "post",
-		url: "http://localhost:5000/user/auth",
+		url: "https://api-relicarioartedecor.herokuapp.com/user/auth",
 		data: {
 			email: email,
 			senha: senha
@@ -56,7 +56,7 @@ registerUser =()=>{
 
 	axios({
 		method: "post",
-		url: "http://localhost:5000/user/register",
+		url: "https://api-relicarioartedecor.herokuapp.com/user/register",
 		data: {
 			name: nam,
 			sname: snam,
