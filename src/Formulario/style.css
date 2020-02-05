@@ -1,0 +1,14 @@
+
+.card-form{
+	width: 420px;
+	height: 90vh;
+	margin: 1rem .5rem 1rem .5rem;
+	background-image: linear-gradient(#4A778C 5%,#2F4F63 30%,#282c34 98%);
+	padding: 80px 40px;
+	border-radius: 10px;
+	position: absolute;
+	top: 55vh;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+}
